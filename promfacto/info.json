@@ -1,6 +1,6 @@
 {
     "name": "promfacto",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "title": "Promfacto",
     "author": "ncabatoff + rewbycraft",
     "description": "Publish metrics to a Prometheus.io server",
