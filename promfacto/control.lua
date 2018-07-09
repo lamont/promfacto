@@ -306,7 +306,8 @@ function reportBoilers(forceName)
               -- log( serpent.block( { ent.name, ent.type, ent,energy } ))
               local fuelinv = ent.get_fuel_inventory()
               for k,v in pairs(fuelinv.get_contents()) do
-                  log( serpent.block( { k, v } ))
+                  -- there was a handful of raw wood
+                  -- log( serpent.block( { k, v } ))
                   coal = coal + v
               end
             end
