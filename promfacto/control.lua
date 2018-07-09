@@ -303,7 +303,7 @@ function reportBoilers(forceName)
         if ent then
             totEnergy = totEnergy + ent.energy
             if not ent.get_fuel_inventory() then
-              log( serpent.block( ent ))
+              log( serpent.block( { ent.name, ent.type } ))
             end
             local fuelinv = ent.get_fuel_inventory()
             for k,v in pairs(fuelinv.get_contents()) do
