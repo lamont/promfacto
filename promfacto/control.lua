@@ -302,12 +302,13 @@ function reportBoilers(forceName)
         end
         if ent then
             totEnergy = totEnergy + ent.energy
-            if not ent.get_fuel_inventory() then
-              log( serpent.block( { ent.name, ent.type } ))
-            end
-            local fuelinv = ent.get_fuel_inventory()
-            for k,v in pairs(fuelinv.get_contents()) do
-                coal = coal + v
+            if ent.get_fuel_inventory() then
+              -- log( serpent.block( { ent.name, ent.type, ent,energy } ))
+              local fuelinv = ent.get_fuel_inventory()
+              for k,v in pairs(fuelinv.get_contents()) do
+                  log( serpent.block( { k, v } ))
+                  coal = coal + v
+              end
             end
         end
     end
